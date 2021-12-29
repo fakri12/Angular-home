@@ -1,0 +1,46 @@
+
+<form class="searchposition divborder">
+    <br>
+    <h2> Chercher votre Composant</h2>
+    <br>
+    <br>
+    <div class="form-row align-items-center ">
+      <div class="col-auto my-1">
+        <label class="mr-sm-2" for="inlineFormCustomSelect">Marque :  </label>
+        <select class="custom-select mr-sm-2 selectposition" id="inlineFormCustomSelect">
+          <option selected>Choisir...</option>
+          <option value="1">BMW</option>
+          <option value="2">Mercedes</option>
+          <option value="3">Toyota</option>
+        </select>
+      </div>
+      <br>
+      <br>
+      <div class="col-auto my-1">
+        <label class="mr-sm-2" for="inlineFormCustomSelect">Composant :    </label>
+        <select class="custom-select mr-sm-2 selecti" id="inlineFormCustomSelect" name="Component" [(ngModel)]="Component">
+          <option selected>Choisir...</option>
+          <option value="Moteur">Moteur</option>
+          <option value="échappement">échappement</option>
+          <option value="Train-roulant">Train-roulant</option>
+          <option value="Chaufage">Chaufage</option>
+          <option value="Freinage">Freinage</option>
+        </select>
+      </div>
+      <br>
+      <br>
+      <div class="col-auto my-1">
+        <label class="mr-sm-2" for="inlineFormCustomSelect">Sous-Composant :   </label>
+        <select class="custom-select mr-sm-2 selectposin3" id="inlineFormCustomSelect">
+          <option selected>Choisir...</option>
+          <ng-container *ngFor="let a of SousComponentsdata" >
+          <option *ngIf="Component===a.type">{{a.name}}</option>
+         </ng-container>
+        </select>
+      </div>
+      <br>
+      <br>
+        <button type="submit" class="btn btn-outline-secondary">Chercher</button>
+    </div>
+    <br>
+  </form>
