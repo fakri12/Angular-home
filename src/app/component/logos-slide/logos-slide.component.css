@@ -1,0 +1,22 @@
+.containers{
+  width: 90%;
+  margin-left: 20%;
+}
+
+.partners img{
+  transition: all .3s ease;
+  height: 120%;
+  width: 110%;
+}
+
+.partners img:hover{
+  box-shadow: 0 0 10px 1px cornflowerblue;
+}
+
+.row{
+  height: 90%;
+}
+.col-md-2{
+  width: 10%;
+
+}
