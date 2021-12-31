@@ -1,3 +1,4 @@
+
 import { Component, Injectable, OnInit } from '@angular/core';
 import { ComponentCarSe } from 'src/app/services/componentCarSe.service';
 import {ComponentCar} from 'src/app/model/componentCar.model';
@@ -9,6 +10,7 @@ import {SharedService} from "../../shared/shared.service";
   templateUrl: './car-component.component.html',
   styleUrls: ['./car-component.component.css']
 })
+
 @Injectable({
   providedIn: 'root'
 })
@@ -19,6 +21,7 @@ export class CarComponentComponent implements OnInit {
    }
 
   components?:ComponentCar[];
+
   componentdetail?:ComponentCar;
 
   ngOnInit(): void {
@@ -29,6 +32,7 @@ export class CarComponentComponent implements OnInit {
       this.components=data;
     })
   }
+
 
   public senddetails(c: ComponentCar){
     

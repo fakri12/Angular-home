@@ -12,6 +12,7 @@ export class UpNavBarComponent implements OnInit {
   }
   ngOnInit(): void {
   }
+   myInfo:boolean=true;
 
   changecheck(){
     console.log(this.app.componantdetails);
