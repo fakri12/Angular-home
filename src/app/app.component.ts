@@ -8,28 +8,27 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 })
 export class AppComponent {
   title = 'POS';
-  customOptions: OwlOptions = {
-    loop: true,
-    mouseDrag: false,
-    touchDrag: false,
-    pullDrag: false,
-    dots: false,
-    navSpeed: 700,
-    navText: ['', ''],
-    responsive: {
-      0: {
-        items: 1
-      },
-      400: {
-        items: 2
-      },
-      740: {
-        items: 3
-      },
-      940: {
-        items: 4
-      }
-    },
-    nav: true
+
+  check = false;
+  componantdetails = false;
+  
+  
+  
+
+ public getCheck(){
+    return this.check;
+  }
+  public setCheck(v:boolean){
+    console.log(v);
+    
+    this.check=v;
+  }
+
+  public getComponantdetails(){
+    return this.componantdetails
+  }
+
+  public setComponantdetails(v:boolean){
+    this.componantdetails = v;
   }
 }

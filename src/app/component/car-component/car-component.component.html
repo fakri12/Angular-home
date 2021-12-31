@@ -1,0 +1,17 @@
+
+<div class="row row-cols-1 row-cols-md-5 g-4">
+    <div class="col" *ngFor="let c of components">
+
+      <a href="#" role="button" type="button" (click)="senddetails(c)">
+      <div class="card h-100" style="text-align: center;" >
+        <img src="{{c.picture}}" class="card-img-top imgcomp" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{c.name}}</h5>
+          <p class="card-text">{{c.description}}</p>
+          <h6 class="card-title">price : {{c.price}} DH</h6>
+          <h6 class="card-title">Number rate : {{c.numberPersonRate}} <i class="fas fa-star" style="color: yellow;"></i></h6>
+        </div>
+      </div>
+    </a>
+    </div>
+  </div>

@@ -1,4 +1,16 @@
 <app-up-nav-bar></app-up-nav-bar>
-<br>
-<br>
+
+<app-down-nav-bar></app-down-nav-bar>
+<app-search-home></app-search-home>
 <app-logos-slide></app-logos-slide>
+<app-welcome-home></app-welcome-home>
+<ng-container *ngIf="componantdetails" >
+    <app-desccomponent></app-desccomponent>
+    <app-car-component></app-car-component>
+</ng-container>
+<ng-container *ngIf="!componantdetails" >
+    <app-car-component></app-car-component>
+</ng-container>
+<app-sign-in></app-sign-in>
+<app-footer></app-footer>
+<app-sign-up></app-sign-up>
