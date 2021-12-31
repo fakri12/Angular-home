@@ -8,6 +8,11 @@ import { DownNavBarComponent } from './component/down-nav-bar/down-nav-bar.compo
 import { SearchHomeComponent } from './component/search-home/search-home.component';
 import { FormsModule } from '@angular/forms';
 import { WelcomeHomeComponent } from './component/welcome-home/welcome-home.component';
+import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { ShoppingCartComponent } from './component/shopping-cart/shopping-cart.component';
+import { HttpClientModule } from '@angular/common/http';
+import { CarComponentComponent } from './component/car-component/car-component.component';
 
 @NgModule({
   declarations: [
@@ -15,12 +20,17 @@ import { WelcomeHomeComponent } from './component/welcome-home/welcome-home.comp
     UpNavBarComponent,
     DownNavBarComponent,
     SearchHomeComponent,
-    WelcomeHomeComponent
+    WelcomeHomeComponent,
+    ShoppingCartComponent,
+    CarComponentComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    RouterModule,
+    CommonModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

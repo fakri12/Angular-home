@@ -11,5 +11,5 @@ export class UpNavBarComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+   myInfo:boolean=true;
 }
