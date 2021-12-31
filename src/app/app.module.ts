@@ -8,13 +8,21 @@ import { DownNavBarComponent } from './component/down-nav-bar/down-nav-bar.compo
 import { CarComponentComponent } from './component/car-component/car-component.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SignInComponent } from './component/sign-in/sign-in.component';
+import { FooterComponent } from './component/footer/footer.component';
+import { SignUpComponent } from './component/sign-up/sign-up.component';
+import { DesccomponentComponent } from './component/desccomponent/desccomponent.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UpNavBarComponent,
     DownNavBarComponent,
-    CarComponentComponent
+    CarComponentComponent,
+    SignInComponent,
+    FooterComponent,
+    SignUpComponent,
+    DesccomponentComponent
   ],
   imports: [
     BrowserModule,

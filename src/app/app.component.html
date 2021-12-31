@@ -1,3 +1,12 @@
 <app-up-nav-bar></app-up-nav-bar>
 <app-down-nav-bar></app-down-nav-bar>
-<app-car-component></app-car-component>
+<ng-container *ngIf="componantdetails" >
+    <app-desccomponent></app-desccomponent>
+    <app-car-component></app-car-component>
+</ng-container>
+<ng-container *ngIf="!componantdetails" >
+    <app-car-component></app-car-component>
+</ng-container>
+<app-sign-in></app-sign-in>
+<app-footer></app-footer>
+<app-sign-up></app-sign-up>

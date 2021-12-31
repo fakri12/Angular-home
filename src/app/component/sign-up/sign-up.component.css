@@ -1,0 +1,23 @@
+.center{
+    margin: 50px 20% 50px 20%;
+}
+.small-div{
+    width: 60%;
+    margin-left: 20%;
+}
+.fb {
+    background-color: #3B5998;
+    color: white;
+    margin-right: 20px;
+  }
+  .google {
+    background-color: #dd4b39;
+    color: white;
+  }
+  .col {
+    float: left;
+    width: 50%;
+    margin: auto;
+    padding: 0 50px;
+    margin-top: 6px;
+  }

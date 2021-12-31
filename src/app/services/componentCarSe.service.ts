@@ -10,8 +10,6 @@ export class ComponentCarSe{
 
     getComponent():Observable<ComponentCar[]>{
         let host = environment.host;
-        console.log("HHHH");
-        
         return this.http.get<ComponentCar[]>(host+"/carComponent");
     }
 }

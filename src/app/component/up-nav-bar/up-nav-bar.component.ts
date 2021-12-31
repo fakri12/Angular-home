@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AppComponent } from 'src/app/app.component';
 
 @Component({
   selector: 'app-up-nav-bar',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UpNavBarComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(public app:AppComponent) {
+  }
   ngOnInit(): void {
   }
 
+  changecheck(){
+    console.log(this.app.componantdetails);
+    
+    this.app.setComponantdetails(false);
+  }
 }
