@@ -38,7 +38,7 @@ import { DesccomponentComponent } from './component/desccomponent/desccomponent.
     FormsModule,
     RouterModule,
     CommonModule,
-    HttpClientModule
+    HttpClientModule,
     ReactiveFormsModule
   ],
   providers: [],
