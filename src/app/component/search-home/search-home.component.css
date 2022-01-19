@@ -12,7 +12,8 @@
     margin-left: 1.5%;
 }
 .divborder{
-    width: 30%;
+    width: 130%;
+    height: 100%;
     border: 1px black ridge;
     text-align: center;
 }
