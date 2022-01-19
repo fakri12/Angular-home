@@ -1,6 +1,8 @@
 .divborder{
-    width: 60%;
+    width: 110%;
     border: 1px black ridge;
     text-align: center;
-    margin-left: 38%;
+    margin-left: 20%;
+    margin-top: 2.6%;
+    height: 35%;
 }

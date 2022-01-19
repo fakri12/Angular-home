@@ -8,7 +8,6 @@ import { UpNavBarComponent } from './component/up-nav-bar/up-nav-bar.component';
 import { DownNavBarComponent } from './component/down-nav-bar/down-nav-bar.component';
 import { LogosSlideComponent } from './component/logos-slide/logos-slide.component';
 import { PaymentComponent } from './component/payment/payment.component';
-import { CarouselModule } from 'ngx-owl-carousel-o';
 
 import { SearchHomeComponent } from './component/search-home/search-home.component';
 import { WelcomeHomeComponent } from './component/welcome-home/welcome-home.component';
@@ -29,21 +28,15 @@ import { DesccomponentComponent } from './component/desccomponent/desccomponent.
     UpNavBarComponent,
     DownNavBarComponent,
     LogosSlideComponent,
-    PaymentComponent
-  ],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    AppRoutingModule,
-    CarouselModule,
+    PaymentComponent,
+    CarComponentComponent,
+    DesccomponentComponent,
+    FooterComponent,
     SearchHomeComponent,
     WelcomeHomeComponent,
-    ShoppingCartComponent,
-    CarComponentComponent,
-    SignInComponent,
-    FooterComponent,
     SignUpComponent,
-    DesccomponentComponent
+    SignInComponent,
+    ShoppingCartComponent
   ],
   imports: [
     BrowserModule,
