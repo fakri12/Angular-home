@@ -29,13 +29,7 @@ import { DesccomponentComponent } from './component/desccomponent/desccomponent.
     UpNavBarComponent,
     DownNavBarComponent,
     LogosSlideComponent,
-    PaymentComponent
-  ],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    AppRoutingModule,
-    CarouselModule,
+    PaymentComponent,
     SearchHomeComponent,
     WelcomeHomeComponent,
     ShoppingCartComponent,
