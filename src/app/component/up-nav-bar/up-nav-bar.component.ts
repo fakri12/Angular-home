@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SocialAuthService, SocialUser } from 'angularx-social-login';
 import { AppComponent } from 'src/app/app.component';
 
 @Component({
@@ -8,9 +9,19 @@ import { AppComponent } from 'src/app/app.component';
 })
 export class UpNavBarComponent implements OnInit {
 
-  constructor(public app:AppComponent) {
+  user!:SocialUser;
+  isLogIn = false;
+  
+  constructor(public app:AppComponent, private authService: SocialAuthService ) {
+    
   }
   ngOnInit(): void {
+    this.authService.authState.subscribe(
+      data =>{
+        this.isLogIn = (data != null)
+        this.user = data;
+      }
+    )
   }
    myInfo:boolean=true;
 
@@ -18,5 +29,9 @@ export class UpNavBarComponent implements OnInit {
     console.log(this.app.componantdetails);
     
     this.app.setComponantdetails(false);
+  }
+
+  signOut(): void {
+    this.authService.signOut();
   }
 }

@@ -1,4 +1,5 @@
 <div class="modal fade " id="signup" aria-hidden="true" aria-labelledby="signupLabel" tabindex="-1">
+  <form [formGroup]="form" (ngSubmit)="submit()">
     <div class="modal-dialog modal-dialog-centered modal-xl">
       <div class="modal-content small-div">  
         <div class="modal-header">
@@ -6,37 +7,58 @@
             <span style="font-size: 40px;"><b>POS</b></span>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <form>
             <div class="center">
+              <div class="form-group">
                 <div class="mb-3">
                     <label for="name" class="form-label">name</label>
-                    <input type="text" class="form-control" id="name" aria-describedby="emailHelp">
+                    <input type="text" formControlName="name" class="form-control" id="name" aria-describedby="emailHelp">
+                    <div *ngIf="f['name'].touched && f['name'].invalid" class="alert alert-danger">
+                      <div *ngIf="f['name'].errors && f['name'].errors['required']">name is required.</div>
+                  </div>
                 </div>
+              </div>
                 <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <input type="email" formControlName="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  <div *ngIf="f['email'].touched && f['email'].invalid" class="alert alert-danger">
+                  <div *ngIf="f['email'].errors && f['email'].errors['required']">email is required.</div>
+                </div>
+                <div class="mb-3">
+                  <label for="city1" class="form-label">city</label>
+                  <input type="text" formControlName="city" class="form-control" id="city1" aria-describedby="emailHelp">
+                  <div *ngIf="f['city'].touched && f['city'].invalid" class="alert alert-danger">
+                    <div *ngIf="f['city'].errors && f['city'].errors['required']">city is required.</div>
+                </div>
+                <div class="mb-3">
+                  <label for="adress1" class="form-label">adress</label>
+                  <input type="text" formControlName="adress" class="form-control" id="adress1" aria-describedby="emailHelp">
+                  <div *ngIf="f['adress'].touched && f['adress'].invalid" class="alert alert-danger">
+                    <div *ngIf="f['adress'].errors && f['adress'].errors['required']">adress is required.</div>
                 </div>
                 <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1">
+                <input type="password" formControlName="pass" class="form-control" id="exampleInputPassword1">
+                <div *ngIf="f['pass'].touched && f['pass'].invalid" class="alert alert-danger">
+                  <div *ngIf="f['pass'].errors && f['pass'].errors['required']">password is required.</div>
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword2" class="form-label">Conform Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword2">
+                    <input type="password" formControlName="passVer" class="form-control" id="exampleInputPassword2">
+                    <div *ngIf="(f['passVer'].touched && f['passVer'].invalid) || f['passVer'].value != f['pass'].value" class="alert alert-danger">
+                      <div  >password verification must be like the password.</div>
                 </div>
             </div>
         <div class="modal-footer">
             <div class="col">
-                <a href="#" class="fb btn">
+                <a class="fb btn" (click)="signInWithFB()">
                     <i class="fab fa-facebook"></i> Login with Facebook
                 </a>
-                <a href="#" class="google btn">
+                <a class="google btn" (click)="signInWithGoogle()">
                     <i class="fab fa-google"></i> Login with Google+
                 </a>
             </div>
-          <button class="btn btn-primary" data-bs-target="#signup2" data-bs-toggle="modal">sign up</button>
+          <button class="btn btn-primary" data-bs-target="#signup2" data-bs-toggle="modal" [disabled]="form.invalid">sign up</button>
         </div>
-        </form>
       </div>
     </div>
   </div>
