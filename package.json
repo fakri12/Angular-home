@@ -18,6 +18,8 @@
     "@angular/platform-browser": "~13.1.0",
     "@angular/platform-browser-dynamic": "~13.1.0",
     "@angular/router": "~13.1.0",
+    "@auth0/angular-jwt": "^5.0.2",
+    "angular2-jwt": "^0.2.3",
     "angularx-social-login": "^4.0.1",
     "concurrently": "^6.5.1",
     "font-awesome": "^4.7.0",

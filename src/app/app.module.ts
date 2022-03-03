@@ -48,7 +48,7 @@ import { GoogleLoginProvider, FacebookLoginProvider } from 'angularx-social-logi
     CommonModule,
     HttpClientModule,
     ReactiveFormsModule,
-    SocialLoginModule
+    SocialLoginModule,
   ],
   providers: [
     {

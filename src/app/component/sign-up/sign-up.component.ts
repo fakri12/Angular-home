@@ -41,9 +41,7 @@ export class SignUpComponent implements OnInit {
       }
     )
   }
-  submit(){
-    console.log("HHHHHHHH");
-    
+  submit(){    
     this.client.adress = this.form.value['adress'];
     this.client.f_name = this.form.value['name'];
     this.client.l_name = this.form.value['name'];
@@ -69,11 +67,14 @@ export class SignUpComponent implements OnInit {
 
   signInWithFB(): void {
     this.authService.signIn(FacebookLoginProvider.PROVIDER_ID).then(data =>{
-      this.user = data;}
+      this.user = data;
+      console.log(data);
+    }
       );
   }
 
   signOut(): void {
+    this.service.logout();
     this.authService.signOut();
   }
 

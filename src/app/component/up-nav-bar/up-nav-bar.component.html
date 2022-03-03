@@ -1,4 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  {{clientDetail()}}
     <div class="container-fluid">
         <a class="navbar-brand" (click)="changecheck()" type="button">
             <i class="far fa-cars" style="font-size: 40px;"></i>
@@ -17,20 +18,27 @@
           <li class="nav-item">
             <a class="nav-link active contact" aria-current="page" href="#foot">Contact us</a>
           </li>
-          <li class="nav-item sign" *ngIf="!isLogIn">
+          <li class="nav-item sign" *ngIf="!isLogIn && !isLogInNormal" >
           <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
           <a data-bs-toggle="modal" href="#exampleModalToggle" role="button"><label class="btn btn-outline-secondary " for="btncheck1">Sign in</label></a>
             </li>
-            <li class="nav-item" *ngIf="!isLogIn">
+            <li class="nav-item" *ngIf="!isLogIn && !isLogInNormal">
           <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
           <a data-bs-toggle="modal" href="#signup" role="button"><label class="btn btn-outline-secondary" for="btncheck2">sign up</label></a>
             </li>
             <li class="nav-item" *ngIf="isLogIn">
-              <span style="font-size: 13px;"><b>Welcom Back {{user.name}} <img src="{{user.photoUrl}}" alt=""> </b></span>
+              <span style="font-size: 13px;"><b>Welcom {{user.name}} <img src="{{user.photoUrl}}" alt=""> </b></span>
+            </li>
+            <li class="nav-item" *ngIf="isLogInNormal">
+              <span style="font-size: 13px;"><b>Welcom  {{client.f_name}} <img src="https://st3.depositphotos.com/4111759/13425/v/600/depositphotos_134255710-stock-illustration-avatar-vector-male-profile-gray.jpg" alt=""> </b></span>
             </li>
             <li class="nav-item" *ngIf="isLogIn">
               <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
               <a data-bs-toggle="modal" href="" role="button" (click)="signOut()"><label class="btn btn-outline-secondary" for="btncheck2">Log out</label></a>
+            </li>
+            <li class="nav-item" *ngIf="isLogInNormal">
+              <input type="button" class="btn-check" id="btncheck3" autocomplete="off">
+              <a  href="" role="button" (click)="signOutNormal()"><label class="btn btn-outline-secondary" for="btncheck3">Log out</label></a>
             </li>
           <li class="nav-item ">
               <div class="cart">
@@ -38,11 +46,8 @@
               <ng-template #elseBlock> <a routerLink="/" (click)="myInfo=!myInfo"><i class="fas fa-cart-plus" style="font-size: 40px; color: black;"></i></a></ng-template>
             </div>
            </li>
-        
         </ul>
       </div>
     </div>
   </nav>
-  
-  
   <router-outlet></router-outlet>
