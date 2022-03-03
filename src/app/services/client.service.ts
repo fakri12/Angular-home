@@ -61,4 +61,7 @@ export class clientService{
         let code = {"code":code2};
         return this.http.post<any>(host+"/client/verify", code);
       }
+   
+      
+
 }
