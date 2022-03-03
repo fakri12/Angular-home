@@ -6,22 +6,22 @@
                     <div class="col">
                         <h4><b>Shopping Cart</b></h4>
                     </div>
-                    <div class="col align-self-center text-right text-muted"> {{returnlength()}} </div>
+                    <div class="col align-self-center text-right text-muted"> {{ totalQuantity }} </div>
                 </div>
             </div>
-            <div class="row " *ngFor="let c of components">
+            <div class="row " *ngFor="let c of cartitems">
                 <div class="row main align-items-center">
-                    <div class="col-2"><img class="img-fluid" src="{{c.picture}}"></div>
+                    <div class="col-2"><img class="img-fluid" src="{{c.component.picture}}"></div>
                     <div class="col">
-                        <div class="row text-muted">{{c.name}}</div>
-                        <div class="row">{{c.description}}</div>
+                        <div class="row text-muted">{{c.component.name}}</div>
+                        <div class="row">{{c.component.description}}</div>
                     </div>
-                    <div class="col"> <a href="#" (click)="decrement(c.id)" >-</a> {{c.quantity}}<a href="#" (click)="increment(c.id)">+</a> </div>
-                    <div class="col">&euro;{{c.price}} <span class="close">&#10005;</span></div>
+                    <div class="col"> <a href="#" routerLink="/cart" (click)="decrement(c.component.id)"  >-</a> {{c.quantity}}<a href="#" routerLink="/cart" (click)="increment(c.component.id)">+</a> </div>
+                    <div class="col">&euro;{{c.component.price}} <a href="#" routerLink="/cart" (click)="deleteformpanier(c.component.id)"><span class="close">&#10005;</span> </a> </div>
                 </div>
             </div>
     
-            <button class="back-to-shop btn button"> &leftarrow; Back to shop </button>
+            <button routerLink="/" class="back-to-shop btn button"> &leftarrow; Back to shop </button>
         </div>
         <div class="col-md-4 summary">
             <div>
@@ -30,7 +30,7 @@
             <br>
             <div class="row" style="border-top: 1px solid rgba(0,0,0,.1); padding: 2vh 0;">
                 <div class="col">TOTAL PRICE</div>
-                <div class="col text-right">&euro; {{somme()}} </div>
+                <div class="col text-right">{{totalPrice| currency:'USD'}} </div>
             </div> <button class="btn positionbottom">CHECKOUT</button>
         </div>
     </div>

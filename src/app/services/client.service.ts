@@ -12,4 +12,7 @@ export class clientService{
         let host=environment.host2;
         return this.http.post<Client>(host+"/login", client);
       }
+   
+      
+
 }
