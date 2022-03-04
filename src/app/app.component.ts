@@ -10,23 +10,19 @@ export class AppComponent {
 
   check = false;
   componantdetails = false;
-  
-  
+  paiment = false;
+  cart = false;
   
 
  public getCheck(){
     return this.check;
   }
-  public setCheck(v:boolean){
-    console.log(v);
-    
+  public setCheck(v:boolean){    
     this.check=v;
   }
-
   public getComponantdetails(){
     return this.componantdetails
   }
-
   public setComponantdetails(v:boolean){
     this.componantdetails = v;
   }

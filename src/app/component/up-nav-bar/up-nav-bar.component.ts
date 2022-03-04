@@ -104,5 +104,8 @@ export class UpNavBarComponent implements OnInit {
     localStorage.removeItem('token');
     this.service.email = null;
   }
+  isclicked(){
+    this.app.cart = !this.app.cart;
+  }
 }
 

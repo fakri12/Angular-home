@@ -5,6 +5,7 @@ import { SharedService } from 'src/app/shared/shared.service';
 import { CartService } from 'src/app/services/cart.service';
 import { panierservice } from 'src/app/services/panierservice.service';
 import { CartItem } from 'src/app/model/cartItem';
+import { AppComponent } from 'src/app/app.component';
 
 @Component({
   providers:[CarComponentComponent],
@@ -19,7 +20,7 @@ export class ShoppingCartComponent implements OnInit {
     quantity: 0
   };
   objectitems: any;
-  constructor(private cartService:CartService,private sharedservice:SharedService,private panierservice:panierservice) {
+  constructor(private cartService:CartService,private sharedservice:SharedService,private panierservice:panierservice, public app:AppComponent ) {
     console.log("HHHHHHHHHHHHHHHH fISRST");
     this.updateCarStatus();
     console.log("cc"+this.totalPrice);
@@ -178,7 +179,12 @@ updateCarStatus(){
 
 };
  
-
+goPaiement(){
+  this.app.paiment = true;
+  this.app.check = false;
+  this.app.componantdetails = false;
+  console.log("HHHHHHHHHHHHH");
+}
 
 
 }

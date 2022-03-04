@@ -1,24 +1,33 @@
-<app-up-nav-bar></app-up-nav-bar>
 
-<app-down-nav-bar></app-down-nav-bar>
-<div class="positionwelcome">
-<app-search-home></app-search-home>
-<div>
-<app-welcome-home></app-welcome-home>
-<div class="positionslide">
-<app-logos-slide></app-logos-slide>
-</div>
-</div>
-</div>
-<br>
 <ng-container *ngIf="componantdetails" >
+    <app-up-nav-bar></app-up-nav-bar>
+    <app-down-nav-bar></app-down-nav-bar>
     <app-desccomponent></app-desccomponent>
     <app-car-component></app-car-component>
+    <app-footer></app-footer>
 </ng-container>
-<ng-container *ngIf="!componantdetails" >
+<ng-container *ngIf="!componantdetails && !paiment" >
+    <app-up-nav-bar></app-up-nav-bar> 
+    <app-down-nav-bar></app-down-nav-bar>
+    <div class="positionwelcome">
+    <app-search-home></app-search-home>
+    <div>
+    <app-welcome-home></app-welcome-home>
+    <div class="positionslide">
+    <app-logos-slide></app-logos-slide>
+    </div>
+    </div>
+    </div>
+    <br>
     <app-car-component></app-car-component>
+    <app-sign-in></app-sign-in>
+    <app-footer></app-footer>
+    <app-sign-up></app-sign-up>
 </ng-container>
-<app-sign-in></app-sign-in>
-<app-footer></app-footer>
-<app-sign-up></app-sign-up>
-<app-payment></app-payment>
+
+
+<ng-container *ngIf="paiment" >
+    <app-payment></app-payment>
+    <app-footer></app-footer>
+</ng-container>
+

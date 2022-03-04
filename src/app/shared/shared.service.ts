@@ -16,20 +16,14 @@ export class SharedService {
   num!:number
   constructor() { }
 
-
   getcartitems(){
     return this.cartitems;
   }
-
-
   setcartitems(cartitemsv:CartItem[]){
     this.cartitems=cartitemsv;
   }
-
   gettotalprice(){
-    
     return this.totalprice;
-  
   }
 
   settotalprice(ttprice:number){
@@ -37,12 +31,8 @@ export class SharedService {
     this.totalprice=ttprice;
   
   }
-
-
   gettotalquantity(){
-    
     return this.totalquantity;
-  
   }
 
   settotalquantity(ttquantity:number){
@@ -50,11 +40,6 @@ export class SharedService {
     this.totalquantity=ttquantity;
   
   }
-
-
-
-
-
 
   setComponentDetails(data:ComponentCar){  
     

@@ -89,6 +89,8 @@ export class CarComponentComponent implements OnInit {
   }
 
    public senddetails(c: ComponentCar){
+     this.app.paiment = false;
+     this.app.cart = false;
    this.service.setComponentDetails(c);
    this.app.setComponantdetails(true);
    }
